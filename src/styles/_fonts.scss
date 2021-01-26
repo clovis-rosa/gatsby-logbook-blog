@@ -1,0 +1,77 @@
+@font-face {
+  font-family: "Gt America Mono";
+  src: url("../assets/fonts/GTAmericaMono/GTAmericaMono-Regular.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Gt America Mono";
+  src: url("../assets/fonts/GTAmericaMono/GTAmericaMono-Medium.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 500;
+}
+
+// @font-face {
+//   font-family: "Gt America Mono";
+//   src: url("../assets/fonts/GTAmericaMono/GTAmericaMono-Bold.woff2")
+//     format("woff2");
+//   font-style: normal;
+//   font-weight: 700;
+// }
+
+@font-face {
+  font-family: "Vesterbro Poster";
+  src: url("../assets/fonts/Vesterbro/Vesterbro-Poster.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Vesterbro Poster";
+  src: url("../assets/fonts/Vesterbro/Vesterbro-Extrabold.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "Vesterbro Poster";
+  src: url("../assets/fonts/Vesterbro/Vesterbro-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/*───────────────────────────────────-*/
+
+/**
+ * Use the default user interface font in all browsers (opinionated).
+ */
+
+:root {
+  --fontFamily-system: system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu",
+    "Cantarell", "Noto Sans", BlinkMacSystemFont, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --font-family-primary: "Vesterbro Poster", var(--fontFamily-system);
+  --font-family-secondary: "Gt America Mono", var(--fontFamily-system);
+}
+
+/**
+ * Use the default monospace user interface font in all browsers (opinionated).
+ */
+
+code,
+kbd,
+samp,
+pre {
+  font-family:
+    /* macOS 10.10+ */ "Menlo", /* Windows 6+ */ "Consolas",
+    /* Android 4+ */ "Roboto Mono", /* Ubuntu 10.10+ */ "Ubuntu Monospace",
+    /* KDE Plasma 5+ */ "Noto Mono", /* KDE Plasma 4+ */ "Oxygen Mono",
+    /* Linux/OpenOffice fallback */ "Liberation Mono", /* fallback */ monospace,
+    /* macOS emoji */ "Apple Color Emoji", /* Windows emoji */ "Segoe UI Emoji",
+    /* Windows emoji */ "Segoe UI Symbol", /* Linux emoji */ "Noto Color Emoji";
+}
