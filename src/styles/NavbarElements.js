@@ -9,13 +9,14 @@ export const Nav = styled.nav`
   max-width: 1160px;
   margin: 0 auto;
   padding: ${({ active }) => (active ? "0.75rem 2rem" : "1.5rem 2rem")};
-  background: ${({ active }) => (active ? "#fff" : "var(--color-text)")};
-  border-bottom: 1px solid var(--color-text);
+  background: ${({ active }) =>
+    active ? "var(--color-white)" : "var(--color-black)"};
+  border-bottom: 1px solid var(--color-black);
   transition: all 0.6s ease;
 
   @media screen and (max-width: 960px) {
     /* background: ${({ click }) =>
-      click ? "#fff" : "rgba(255, 255, 255, 0.8)"}; */
+      click ? "var(--color-white)" : "rgba(255, 255, 255, 0.8)"}; */
     transition: 0.8s all ease;
   }
 `
@@ -27,7 +28,8 @@ export const NavbarContainer = styled.div`
 `
 
 export const NavLogo = styled(Link)`
-  color: ${({ active }) => (active ? "#000" : "#fff")};
+  color: ${({ active }) =>
+    active ? "var(--color-black)" : "var(--color-white)"};
   transition: color 0.6s ease;
   justify-self: flex-start;
   cursor: pointer;
@@ -48,10 +50,6 @@ export const NavLogo = styled(Link)`
   } */
 `
 
-// export const NavIcon = styled(DiScala)`
-//   margin: 0 0.5rem 0 2rem;
-// `
-
 export const MobileIcon = styled.div`
   display: none;
 
@@ -69,7 +67,8 @@ export const MobileIcon = styled.div`
     align-items: center;
 
     svg {
-      fill: ${({ active }) => (active ? "#000" : "#fff")};
+      fill: ${({ active }) =>
+        active ? "var(--color-black)" : "var(--color-white)"};
       transition: all 0.6s ease;
     }
   }
@@ -97,14 +96,13 @@ export const NavMenu = styled.ul`
     left: 0; /* */
     opacity: 1;
     transition: all 0.4s ease-in-out;
-    /* background: #fff; */
+    /* background: var(--color-white); */
     background: #b744b8;
     margin: 0 auto;
   }
 `
 
 export const NavItem = styled.li`
-  /* height: 80px; */
   padding: 0;
   margin: 0;
 
@@ -115,7 +113,8 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(Link)`
-  color: ${({ active }) => (active ? "#000" : "#fff")};
+  color: ${({ active }) =>
+    active ? "var(--color-black)" : "var(--color-white)"};
   transition: color 0.6s ease;
   display: flex;
   align-items: center;
@@ -128,7 +127,7 @@ export const NavLinks = styled(Link)`
   text-decoration: 0px transparent underline;
 
   &:hover {
-    /* text-decoration: 2px var(--color-text) underline;
+    /* text-decoration: 2px var(--color-black) underline;
     transition: all 0.2s ease-in-out; */
   }
 
@@ -137,9 +136,9 @@ export const NavLinks = styled(Link)`
     padding: 2rem;
     width: 100%;
     display: table;
-    font-size: 5rem; /* */
+    font-size: 5rem;
     font-weight: bold;
-    color: white; /* */
+    color: white;
 
     &:hover {
       color: #ffd166;

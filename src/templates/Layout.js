@@ -1,17 +1,15 @@
 import React from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
+import Hero from "../components/Hero"
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
     <>
       <Navbar />
-      <div className="global-wrapper">
-        <main>{children}</main>
-        <Footer />
-      </div>
+      <Hero />
+      {children}
+      <Footer />
     </>
   )
 }
-
-export default Layout
