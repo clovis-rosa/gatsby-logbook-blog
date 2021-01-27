@@ -21,13 +21,13 @@ export default function Hero() {
 
 const HeroContainer = styled.div`
   background: var(--color-black);
+  padding: 1rem 2rem 2rem;
 `
 
 const HeroStyles = styled.div`
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
-  padding: 1rem 2rem 2rem;
   position: relative;
   top: 0;
   right: 0;
@@ -63,16 +63,16 @@ const HeroH1Description = styled.div`
   color: var(--color-white);
   width: 60%;
   position: absolute;
-  top: 300px;
-  right: 425px;
+  top: 320px;
+  right: 465px;
   h1 {
     margin: 0;
   }
 
   @media screen and (max-width: 1025px) {
-    font-size: 15px;
-    top: 280px;
-    right: 367px;
+    font-size: 22px;
+    top: 260px;
+    right: 375px;
   }
 
   @media screen and (max-width: 960px) {
@@ -82,21 +82,21 @@ const HeroH1Description = styled.div`
   }
 
   @media screen and (max-width: 834px) {
-    font-size: 15px;
-    top: 225px;
-    right: 290px;
+    font-size: 18px;
+    top: 205px;
+    right: 300px;
   }
 
   @media screen and (max-width: 801px) {
-    font-size: 15px;
-    top: 215px;
-    right: 280px;
+    font-size: 18px;
+    top: 200px;
+    right: 285px;
   }
 
   @media screen and (max-width: 769px) {
-    font-size: 15px;
-    top: 205px;
-    right: 267px;
+    font-size: 18px;
+    top: 185px;
+    right: 275px;
   }
 
   @media screen and (max-width: 412px) {

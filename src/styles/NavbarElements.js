@@ -8,7 +8,7 @@ export const Nav = styled.nav`
   /* width: 100%; */
   /* max-width: 1160px; */
   /* margin: 0 auto; */
-  /* padding: ${({ active }) => (active ? "0.75rem 2rem" : "1.5rem 2rem")}; */
+  padding: ${({ active }) => (active ? "0.75rem 2rem" : "1.5rem 2rem")};
   background: ${({ active }) =>
     active ? "var(--color-white)" : "var(--color-black)"};
   border-bottom: 1px solid var(--color-black);
@@ -28,7 +28,7 @@ export const NavbarContainer = styled.div`
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
-  padding: ${({ active }) => (active ? "0.75rem 2rem" : "1.5rem 2rem")};
+  /* padding: ${({ active }) => (active ? "0.75rem 2rem" : "1.5rem 2rem")}; */
   background: ${({ active }) =>
     active ? "var(--color-white)" : "var(--color-black)"};
   transition: all 0.6s ease;
