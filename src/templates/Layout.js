@@ -6,8 +6,11 @@ import Hero from "../components/Hero"
 export default function Layout({ children }) {
   return (
     <>
-      <Navbar />
-      <Hero />
+      <header>
+        <Navbar />
+        <Hero />
+      </header>
+
       {children}
       <Footer />
     </>
