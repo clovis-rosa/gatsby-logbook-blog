@@ -37,10 +37,10 @@ h6 {
  * Use a comfortable measure in all browsers (opinionated).
  */
 html {
-  padding: 1em;
+  // padding: 1em;
 
   @media (min-width: 34em) {
-    padding: 1em calc(20% - 16em);
+    // padding: 1em calc(20% - 16em);
   }
 }
 
@@ -71,7 +71,8 @@ html {
 body {
   margin: 0; /* 1 */
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
+  // text-rendering: optimizeSpeed;
+  text-rendering: optimizeLegibility; /* !! */
 }
 
 h1,

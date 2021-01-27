@@ -1,47 +1,87 @@
+/* GT America Standard */
 @font-face {
-  font-family: "Gt America Mono";
-  src: url("../assets/fonts/GTAmericaMono/GTAmericaMono-Regular.woff2")
+  font-family: "Gt America Standard";
+  src: url("../assets/fonts/GTAmericaStandard/GT-America-Standard-Regular.woff2")
     format("woff2");
-  font-style: normal;
   font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Gt America Standard";
+  src: url("../assets/fonts/GTAmericaStandard/GT-America-Standard-Regular-Italic.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Gt America Standard";
+  src: url("../assets/fonts/GTAmericaStandard/GT-America-Standard-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Gt America Standard";
+  src: url("../assets/fonts/GTAmericaStandard/GT-America-Standard-Bold-Italic.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: auto;
 }
 
+/* GT America Mono */
 @font-face {
   font-family: "Gt America Mono";
-  src: url("../assets/fonts/GTAmericaMono/GTAmericaMono-Medium.woff2")
+  src: url("../assets/fonts/GTAmericaMono/GT-America-Mono-Regular.woff2")
     format("woff2");
+  font-weight: 400;
   font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Gt America Mono";
+  src: url("../assets/fonts/GTAmericaMono/GT-America-Mono-Medium.woff2")
+    format("woff2");
   font-weight: 500;
-}
-
-// @font-face {
-//   font-family: "Gt America Mono";
-//   src: url("../assets/fonts/GTAmericaMono/GTAmericaMono-Bold.woff2")
-//     format("woff2");
-//   font-style: normal;
-//   font-weight: 700;
-// }
-
-@font-face {
-  font-family: "Vesterbro Poster";
-  src: url("../assets/fonts/Vesterbro/Vesterbro-Poster.woff2") format("woff2");
   font-style: normal;
-  font-weight: 900;
+  font-display: auto;
 }
-
 @font-face {
-  font-family: "Vesterbro Poster";
-  src: url("../assets/fonts/Vesterbro/Vesterbro-Extrabold.woff2")
+  font-family: "Gt America Mono";
+  src: url("../assets/fonts/GTAmericaMono/GT-America-Mono-Bold.woff2")
     format("woff2");
+  font-weight: 700;
   font-style: normal;
-  font-weight: 900;
+  font-display: auto;
 }
 
+/* Vesterbro Poster */
 @font-face {
   font-family: "Vesterbro Poster";
-  src: url("../assets/fonts/Vesterbro/Vesterbro-Regular.woff2") format("woff2");
-  font-style: normal;
+  src: url("../assets/fonts/Vesterbro/Vesterbro-Poster-Regular.woff2")
+    format("woff2");
   font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Vesterbro Poster";
+  src: url("../assets/fonts/Vesterbro/Vesterbro-Poster-Regular-Italic.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Vesterbro Poster";
+  src: url("../assets/fonts/Vesterbro/Vesterbro-Poster-Extrabold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
 }
 
 /*───────────────────────────────────-*/
@@ -56,7 +96,8 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --font-family-primary: "Vesterbro Poster", var(--fontFamily-system);
-  --font-family-secondary: "Gt America Mono", var(--fontFamily-system);
+  --font-family-secondary: "Gt America Standard", var(--fontFamily-system);
+  --font-family-secondary-mono: "Gt America Mono", var(--fontFamily-system);
 }
 
 /**

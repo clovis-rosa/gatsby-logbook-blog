@@ -1,23 +1,21 @@
 import { Link } from "gatsby"
-// import { DiScala } from "react-icons/Di"
 import styled from "styled-components"
 
 export const Nav = styled.nav`
-  background: ${({ active }) =>
-    active
-      ? "#fff"
-      : "linear-gradient(to bottom,  rgba(255,255,255, 0.9) 0%,rgba(255,255,255,0) 100%)"};
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  position: sticky;
   top: 0;
   z-index: 999;
+  position: sticky;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: ${({ active }) => (active ? "0.75rem 2rem" : "1.5rem 2rem")};
+  background: ${({ active }) => (active ? "#fff" : "var(--color-text)")};
+  border-bottom: 1px solid var(--color-text);
+  transition: all 0.6s ease;
 
   @media screen and (max-width: 960px) {
-    background: ${({ click }) => (click ? "#fff" : "rgba(255, 255, 255, 0.8)")};
+    /* background: ${({ click }) =>
+      click ? "#fff" : "rgba(255, 255, 255, 0.8)"}; */
     transition: 0.8s all ease;
   }
 `
@@ -25,23 +23,25 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 80px;
   z-index: 1;
-  width: 100%;
-  /* max-width: 1000px; */
-  max-width: 90%;
-  margin: 0 auto;
 `
 
 export const NavLogo = styled(Link)`
-  color: #141414;
+  color: ${({ active }) => (active ? "#000" : "#fff")};
+  transition: color 0.6s ease;
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-family: var(--font-family-primary);
+  font-size: ${({ active }) => (active ? "1rem" : "1.2rem")};
+  line-height: 1.1;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: uppercase;
   display: flex;
   align-items: center;
   z-index: 990;
+  transition: all 0.6s ease;
 
   /* @media screen and (max-width: 960px) {
     color: white;
@@ -61,12 +61,17 @@ export const MobileIcon = styled.div`
     top: 0;
     right: 0;
     transform: translate(-100%, 60%); */
-    font-size: 1.8rem;
+    font-size: 25px;
     cursor: pointer;
     z-index: 990;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    svg {
+      fill: ${({ active }) => (active ? "#000" : "#fff")};
+      transition: all 0.6s ease;
+    }
   }
 `
 
@@ -110,20 +115,29 @@ export const NavItem = styled.li`
 `
 
 export const NavLinks = styled(Link)`
-  color: #141414;
+  color: ${({ active }) => (active ? "#000" : "#fff")};
+  transition: color 0.6s ease;
   display: flex;
   align-items: center;
-  text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
-  font-family: "Ubuntu", sans-serif;
+  font-family: var(--font-family-secondary-mono);
+  font-size: 0.7rem;
+  line-height: 14px;
+  letter-spacing: 0.02em;
+  text-decoration: 0px transparent underline;
+
+  &:hover {
+    /* text-decoration: 2px var(--color-text) underline;
+    transition: all 0.2s ease-in-out; */
+  }
 
   @media screen and (max-width: 960px) {
     text-align: center;
     padding: 2rem;
     width: 100%;
     display: table;
-    font-size: 10rem; /* */
+    font-size: 5rem; /* */
     font-weight: bold;
     color: white; /* */
 
