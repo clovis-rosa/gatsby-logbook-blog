@@ -1,22 +1,25 @@
 import React from "react"
-
-import Bio from "../components/Bio"
+import { Link } from "gatsby"
 import SEO from "../components/Seo"
 import LatestPosts from "../components/LatestPosts"
 
-const BlogIndex = () => {
+export default function BlogIndex() {
   return (
-    <div className="global-wrapper">
-      <SEO title="Home Page" />
+    <>
+      <SEO title="Logbook | Blog and something here..." />
+
       <section>
-        <Bio />
-        <h3>On anywhere her drew rippedup, on you employed western variety</h3>
-      </section>
-      <section>
+        <h2>Recent Posts:</h2>
+
         <LatestPosts />
+
+        <h4>
+          Read more on our{" "}
+          <Link to="/blog" style={{ color: "red" }}>
+            Blog Page &rarr;
+          </Link>
+        </h4>
       </section>
-    </div>
+    </>
   )
 }
-
-export default BlogIndex

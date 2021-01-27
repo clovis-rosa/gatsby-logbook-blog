@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 import { UseLatestPostsQuery } from "../hooks/UseLatestPostsQuery"
 
-const LatestPosts = () => {
+export default function LatestPosts() {
   const getPostList = () => {
     const postList = []
     const posts = UseLatestPostsQuery()
@@ -24,49 +24,21 @@ const LatestPosts = () => {
   const postList = getPostList()
 
   return (
-    <div>
-      <h1>Recent Posts:</h1>
-      <ol style={{ listStyle: `none` }}>
-        {postList.map(post => (
-          <li key={post.id}>
-            <article
-              className="post-list-item"
-              itemScope
-              itemType="http://schema.org/Article"
-            >
-              <header>
-                <Link to={`/blog${post.path}`}>
-                  <Img fluid={post.image} alt={post.title} />
-                </Link>
-                <h2>
-                  <Link to={`/blog${post.path}`} itemProp="url">
-                    <span itemProp="headline">{post.title}</span>
-                  </Link>
-                </h2>
-                <small>{post.date}</small>
-              </header>
-              {/* <section>
-                  <i>
-                    <p
-                      dangerouslySetInnerHTML={{
-                        __html: post.description || post.excerpt,
-                      }}
-                      itemProp="description"
-                    />
-                  </i>
-                </section> */}
-            </article>
-          </li>
-        ))}
-      </ol>
-      <h4>
-        Read more on our{" "}
-        <Link to="/blog" style={{ color: "red" }}>
-          Blog Page &rarr;
-        </Link>
-      </h4>
-    </div>
+    <>
+      {postList.map(post => (
+        <article key={post.id}>
+          <Link to={`/blog${post.path}`}>
+            <Img fluid={post.image} alt={post.title} />
+          </Link>
+          <h2>
+            <Link to={`/blog${post.path}`} itemProp="url">
+              <span itemProp="headline">{post.title}</span>
+            </Link>
+          </h2>
+          <p>{post.description}</p>
+          <small>{post.date}</small>
+        </article>
+      ))}
+    </>
   )
 }
-
-export default LatestPosts
