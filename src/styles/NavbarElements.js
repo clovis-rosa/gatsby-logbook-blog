@@ -5,10 +5,10 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 999;
   position: sticky;
-  width: 100%;
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: ${({ active }) => (active ? "0.75rem 2rem" : "1.5rem 2rem")};
+  /* width: 100%; */
+  /* max-width: 1160px; */
+  /* margin: 0 auto; */
+  /* padding: ${({ active }) => (active ? "0.75rem 2rem" : "1.5rem 2rem")}; */
   background: ${({ active }) =>
     active ? "var(--color-white)" : "var(--color-black)"};
   border-bottom: 1px solid var(--color-black);
@@ -22,9 +22,17 @@ export const Nav = styled.nav`
 `
 
 export const NavbarContainer = styled.div`
+  background: var(--color-black);
   display: flex;
   justify-content: space-between;
-  z-index: 1;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: ${({ active }) => (active ? "0.75rem 2rem" : "1.5rem 2rem")};
+  background: ${({ active }) =>
+    active ? "var(--color-white)" : "var(--color-black)"};
+  transition: all 0.6s ease;
+  /* z-index: 1; */
 `
 
 export const NavLogo = styled(Link)`
