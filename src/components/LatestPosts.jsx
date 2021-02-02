@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 import { UseLatestPostsQuery } from "../hooks/UseLatestPostsQuery"
 import styled from "styled-components"
-// import { SvgArrowNext } from "./SvgFiles"
+import { SvgArrowNext } from "./SvgFiles"
 
 export default function LatestPosts() {
   const getPostList = () => {
@@ -29,7 +29,7 @@ export default function LatestPosts() {
     <>
       <ArticlesSection>
         <ArticlesContainer>
-          <h2>Recent Posts:</h2>
+          <ArticlesHeader>Featured:</ArticlesHeader>
 
           <ArticleGrid>
             {postList.map(post => (
@@ -40,29 +40,23 @@ export default function LatestPosts() {
                   </Link>
                 </H2>
 
-                <P>{post.description}</P>
-                {/* <ReadMore>
-            <SvgArrow>
-              Read more
-              <SvgArrowNext />
-            </SvgArrow>
-          </ReadMore> */}
+                <P>{post.excerpt}</P>
 
                 <ArticleImage to={`/blog${post.path}`}>
                   <Img fluid={post.image} alt={post.title} />
                 </ArticleImage>
 
-                <Small>Posted in {post.date}.</Small>
+                <ReadMoreWrap>
+                  <Small>Posted in {post.date}.</Small>
+
+                  <ReadMore to={`/blog${post.path}`}>
+                    <small>Read more</small>
+                    <SvgArrowNext />
+                  </ReadMore>
+                </ReadMoreWrap>
               </Article>
             ))}
           </ArticleGrid>
-
-          <h4>
-            Read more on our{" "}
-            <Link to="/blog" style={{ color: "red" }}>
-              Blog Page &rarr;
-            </Link>
-          </h4>
         </ArticlesContainer>
       </ArticlesSection>
     </>
@@ -71,16 +65,22 @@ export default function LatestPosts() {
 
 const ArticlesSection = styled.section`
   background: var(--color-white);
-  padding: 6rem 2rem 3rem;
+  padding: 4rem 2rem 3rem;
 `
 
 const ArticlesContainer = styled.div`
-  /* background: var(--color-black); */
-  /* display: flex; */
-  /* justify-content: space-between; */
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
+`
+
+const ArticlesHeader = styled.h2`
+  font-family: var(--font-family-primary);
+  font-size: 4.75rem;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: normal;
+  margin-bottom: 2rem;
 `
 
 const Article = styled.article`
@@ -120,34 +120,56 @@ const Small = styled.small`
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--color-black);
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 `
 
-const ReadMore = styled.small`
-  font-family: var(--font-family-secondary-mono);
-  font-size: 0.6rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+const ReadMoreWrap = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+`
+
+const ReadMore = styled(Link)`
   color: var(--color-black);
-  margin-bottom: 1rem;
+  text-decoration: 2px underline transparent;
+  cursor: pointer;
 
   display: flex;
   flex-direction: row;
-`
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s all ease;
 
-const ArticleImage = styled(Link)`
-  margin-bottom: 0.5rem;
+  small {
+    font-family: var(--font-family-secondary-mono);
+    font-size: 0.55rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-black);
+  }
 
-  img {
-    border-radius: 10px;
+  svg {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  &:hover {
+    text-decoration: 2px underline var(--color-black);
   }
 `
 
-const SvgArrow = styled.div`
-  svg {
-    width: 1rem;
-    height: 1rem;
+const ArticleImage = styled(Link)`
+  .gatsby-image-wrapper > picture {
+    img {
+      transition: transform 0.6s !important;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 `

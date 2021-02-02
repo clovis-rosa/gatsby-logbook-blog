@@ -10,7 +10,7 @@ export const UseLatestPostsQuery = () => {
         edges {
           node {
             id
-            excerpt
+            excerpt(pruneLength: 100)
             fields {
               slug
             }
