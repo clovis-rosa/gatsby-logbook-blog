@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import { Link } from "gatsby"
 import { UseLatestPostsQuery } from "../hooks/UseLatestPostsQuery"
 import styled from "styled-components"
-import { SvgArrowNext } from "./SvgFiles"
+// import { SvgArrowNext } from "./SvgFiles"
 
 export default function LatestPosts() {
   const getPostList = () => {
@@ -27,35 +27,70 @@ export default function LatestPosts() {
 
   return (
     <>
-      {postList.map(post => (
-        <Article key={post.id}>
-          <H2>
-            <Link to={`/blog${post.path}`}>
-              <span>{post.title}</span>
-            </Link>
-          </H2>
+      <ArticlesSection>
+        <ArticlesContainer>
+          <h2>Recent Posts:</h2>
 
-          <P>{post.description}</P>
-          {/* <ReadMore>
+          <ArticleGrid>
+            {postList.map(post => (
+              <Article key={post.id}>
+                <H2>
+                  <Link to={`/blog${post.path}`}>
+                    <span>{post.title}</span>
+                  </Link>
+                </H2>
+
+                <P>{post.description}</P>
+                {/* <ReadMore>
             <SvgArrow>
               Read more
               <SvgArrowNext />
             </SvgArrow>
           </ReadMore> */}
 
-          <ArticleImage to={`/blog${post.path}`}>
-            <Img fluid={post.image} alt={post.title} />
-          </ArticleImage>
+                <ArticleImage to={`/blog${post.path}`}>
+                  <Img fluid={post.image} alt={post.title} />
+                </ArticleImage>
 
-          <Small>Posted in {post.date}.</Small>
-        </Article>
-      ))}
+                <Small>Posted in {post.date}.</Small>
+              </Article>
+            ))}
+          </ArticleGrid>
+
+          <h4>
+            Read more on our{" "}
+            <Link to="/blog" style={{ color: "red" }}>
+              Blog Page &rarr;
+            </Link>
+          </h4>
+        </ArticlesContainer>
+      </ArticlesSection>
     </>
   )
 }
 
+const ArticlesSection = styled.section`
+  background: var(--color-white);
+  padding: 6rem 2rem 3rem;
+`
+
+const ArticlesContainer = styled.div`
+  /* background: var(--color-black); */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+`
+
 const Article = styled.article`
   padding: 0 0 4rem;
+`
+
+const ArticleGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 `
 
 const H2 = styled.h2`
@@ -104,6 +139,10 @@ const ReadMore = styled.small`
 
 const ArticleImage = styled(Link)`
   margin-bottom: 0.5rem;
+
+  img {
+    border-radius: 10px;
+  }
 `
 
 const SvgArrow = styled.div`
