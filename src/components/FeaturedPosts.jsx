@@ -89,9 +89,6 @@ const ArticlesHeader = styled.h2`
   @media screen and (max-width: 769px) {
     font-size: 2.75rem;
   }
-
-  @media screen and (max-width: 412px) {
-  }
 `
 
 const Article = styled.article`
@@ -107,9 +104,6 @@ const ArticleGrid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 
-  @media screen and (max-width: 1025px) {
-  }
-
   @media screen and (max-width: 960px) {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -123,12 +117,6 @@ const ArticleGrid = styled.div`
   @media screen and (max-width: 801px) {
     grid-template-columns: 1fr;
     gap: 60px;
-  }
-
-  @media screen and (max-width: 769px) {
-  }
-
-  @media screen and (max-width: 412px) {
   }
 `
 
@@ -144,9 +132,6 @@ const H2 = styled.h2`
   @media screen and (max-width: 769px) {
     font-size: 1.5rem;
   }
-
-  @media screen and (max-width: 412px) {
-  }
 `
 
 const P = styled.p`
@@ -161,9 +146,6 @@ const P = styled.p`
   @media screen and (max-width: 769px) {
     font-size: 0.8rem;
   }
-
-  @media screen and (max-width: 412px) {
-  }
 `
 
 const Small = styled.small`
@@ -177,9 +159,6 @@ const Small = styled.small`
 
   @media screen and (max-width: 769px) {
     font-size: 0.55rem;
-  }
-
-  @media screen and (max-width: 412px) {
   }
 `
 

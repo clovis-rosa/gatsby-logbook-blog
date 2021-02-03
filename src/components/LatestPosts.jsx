@@ -130,12 +130,6 @@ const ArticleGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 
-  @media screen and (max-width: 1025px) {
-  }
-
-  @media screen and (max-width: 960px) {
-  }
-
   @media screen and (max-width: 834px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
