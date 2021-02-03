@@ -85,6 +85,13 @@ const ArticlesHeader = styled.h2`
   line-height: 1.1;
   letter-spacing: normal;
   margin-bottom: 2rem;
+
+  @media screen and (max-width: 769px) {
+    font-size: 2.75rem;
+  }
+
+  @media screen and (max-width: 412px) {
+  }
 `
 
 const Article = styled.article`
@@ -133,6 +140,13 @@ const H2 = styled.h2`
   letter-spacing: normal;
   color: var(--color-black);
   margin-bottom: 1rem;
+
+  @media screen and (max-width: 769px) {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 412px) {
+  }
 `
 
 const P = styled.p`
@@ -143,6 +157,13 @@ const P = styled.p`
   letter-spacing: normal;
   color: var(--color-black);
   margin-bottom: 1rem;
+
+  @media screen and (max-width: 769px) {
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: 412px) {
+  }
 `
 
 const Small = styled.small`
@@ -153,6 +174,13 @@ const Small = styled.small`
   letter-spacing: 0.02em;
   color: var(--color-black);
   /* margin-bottom: 1rem; */
+
+  @media screen and (max-width: 769px) {
+    font-size: 0.55rem;
+  }
+
+  @media screen and (max-width: 412px) {
+  }
 `
 
 const ReadMoreWrap = styled.div`
@@ -182,11 +210,20 @@ const ReadMore = styled(Link)`
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--color-black);
+
+    @media screen and (max-width: 769px) {
+      font-size: 0.45rem;
+    }
   }
 
   svg {
     width: 0.7rem;
     height: 0.7rem;
+
+    @media screen and (max-width: 769px) {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
   }
 
   &:hover {
