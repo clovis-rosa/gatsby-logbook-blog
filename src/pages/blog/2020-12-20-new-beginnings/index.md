@@ -2,14 +2,14 @@
 title: "New Beginnings"
 date: "2020-12-20T17:18:00.284Z"
 description: New beginnings description.
-image: "./insta-graph.jpg"
+image: "./insta-graph.png"
 ---
 
 # New Beginnings
 
 _New beginnings description_
 
-![Hello World Image](./insta-graph.jpg)
+![Hello World Image](./insta-graph.png)
 
 ## On deer horse aboard tritely yikes and much
 

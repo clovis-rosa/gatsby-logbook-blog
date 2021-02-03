@@ -9,7 +9,7 @@ image: "./girl-book.png"
 
 _My first blog post description._
 
-![My first blog post.](./girl-book.jpg)
+![My first blog post.](./girl-book.png)
 
 Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove

@@ -2,7 +2,7 @@
 title: "Hello World"
 date: "2020-12-30T17:18:00.284Z"
 description: "Hello World description"
-image: "./hello-world.jpg"
+image: "./hello-world.png"
 ---
 
 # Hello World
@@ -24,7 +24,7 @@ Oh, and here's a great quote from this Wikipedia on
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
 
-![Hello World Image](./hello-world.jpg)
+![Hello World Image](./hello-world.png)
 
 You can also write code blocks here!
 
