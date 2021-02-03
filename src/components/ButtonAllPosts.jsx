@@ -1,11 +1,14 @@
 import React from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 
 export default function ButtonAllPosts() {
   return (
     <ButtonSection>
       <ButtonContainer>
-        <Button>Hover over me</Button>
+        <ButtonLink>
+          <Button className="learn-more">Read More</Button>
+        </ButtonLink>
       </ButtonContainer>
     </ButtonSection>
   )
@@ -23,43 +26,64 @@ const ButtonContainer = styled.div`
   display: grid;
   place-content: center;
 `
-const Button = styled.button`
-  font-family: var(--font-family-primary);
-  background: var(--color-white);
-  color: var(--color-black);
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 0.8rem;
-  border: 3px solid var(--color-black);
-  transition: all 0.5s;
-  /* border-radius: 10px; */
-  width: auto;
-  position: relative;
 
-  &::after {
-    content: "❯";
-    font-weight: 400;
+const ButtonLink = styled(Link)`
+  text-decoration: none;
+`
+
+const Button = styled.button`
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  text-decoration: none;
+
+  font-family: var(--font-family-secondary-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.016rem;
+  color: var(--color-black);
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem;
+  background: var(--color-white);
+  border: 2px solid var(--color-black);
+  border-radius: 0.05rem;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+    background 150ms cubic-bezier(0, 0, 0.58, 1);
+
+  &::before {
     position: absolute;
-    left: 85%;
-    top: 23%; /*31%*/
-    right: 5%;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    opacity: 0;
+    background: transparent;
+    border-radius: inherit;
+    box-shadow: -8px 14px 0 var(--color-black);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1),
+      box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
   }
 
   &:hover {
-    background: var(--color-white);
-    color: var(--color-black);
-    border: 3px solid var(--color-black);
+    transform: translate(0, 0.25em);
 
-    transition: all 0.5s;
-    /* border-radius: 10px; */
-    box-shadow: 0px 6px 15px var(--color-black);
-    padding: 1rem 3.5rem 1rem 1.5rem;
+    &::before {
+      box-shadow: -6px 8px 0 var(--color-black);
+    }
+  }
 
-    &::after {
-      opacity: 1;
-      transition: all 0.5s;
+  &:active {
+    transform: translate(0em, 0.75em);
+
+    &::before {
+      box-shadow: 0 0 0 2px var(--color-black);
+      transform: translate3d(0, 0, -1em);
     }
   }
 `
