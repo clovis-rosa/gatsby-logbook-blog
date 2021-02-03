@@ -69,6 +69,13 @@ export default function LatestPosts() {
 const ArticlesSection = styled.section`
   background: var(--color-white);
   padding: 4rem 2rem 3rem;
+
+  @media screen and (max-width: 769px) {
+  }
+
+  @media screen and (max-width: 412px) {
+    padding: 2rem 2rem 2rem;
+  }
 `
 
 const ArticlesContainer = styled.div`
@@ -87,12 +94,21 @@ const ArticlesHeader = styled.div`
     line-height: 1.1;
     letter-spacing: normal;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: 769px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 412px) {
+      font-size: 1.8rem;
+    }
   }
 
   p {
     font-family: var(--font-family-secondary);
     font-size: 1rem;
     font-weight: 400;
+    /* font-style: italic; */
     line-height: 1.5;
     letter-spacing: normal;
     color: var(--color-black);
@@ -103,12 +119,42 @@ const ArticlesHeader = styled.div`
 const Article = styled.article`
   /* padding: 0 0 4rem; */
   padding: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 `
 
 const ArticleGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+
+  @media screen and (max-width: 1025px) {
+  }
+
+  @media screen and (max-width: 960px) {
+  }
+
+  @media screen and (max-width: 834px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  @media screen and (max-width: 801px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  @media screen and (max-width: 769px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @media screen and (max-width: 412px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 `
 
 const H2 = styled.h2`
@@ -119,6 +165,14 @@ const H2 = styled.h2`
   letter-spacing: normal;
   color: var(--color-black);
   margin-bottom: 1rem;
+
+  @media screen and (max-width: 769px) {
+    font-size: 1.15rem;
+  }
+
+  @media screen and (max-width: 412px) {
+    font-size: 1rem;
+  }
 `
 
 const P = styled.p`
@@ -129,6 +183,10 @@ const P = styled.p`
   letter-spacing: normal;
   color: var(--color-black);
   margin-bottom: 1rem;
+
+  @media screen and (max-width: 412px) {
+    font-size: 0.8rem;
+  }
 `
 
 const Small = styled.small`
@@ -139,6 +197,10 @@ const Small = styled.small`
   letter-spacing: 0.02em;
   color: var(--color-black);
   /* margin-bottom: 1rem; */
+
+  @media screen and (max-width: 769px) {
+    font-size: 0.55rem;
+  }
 `
 
 const ReadMoreWrap = styled.div`
@@ -168,11 +230,20 @@ const ReadMore = styled(Link)`
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--color-black);
+
+    @media screen and (max-width: 769px) {
+      font-size: 0.45rem;
+    }
   }
 
   svg {
     width: 0.7rem;
     height: 0.7rem;
+
+    @media screen and (max-width: 769px) {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
   }
 
   &:hover {
