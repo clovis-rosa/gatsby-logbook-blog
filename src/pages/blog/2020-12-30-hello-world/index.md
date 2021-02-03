@@ -1,9 +1,13 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
-image: "./salty_egg.jpg"
+title: "Hello World"
+date: "2020-12-30T17:18:00.284Z"
+description: "Hello World description"
+image: "./hello-world.jpg"
 ---
+
+# Hello World
+
+_Hello World description_
 
 This is my first post on my new fake blog! How exciting!
 
@@ -20,7 +24,7 @@ Oh, and here's a great quote from this Wikipedia on
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
 
-![Chinese Salty Egg](./salty_egg.jpg)
+![Hello World Image](./hello-world.jpg)
 
 You can also write code blocks here!
 

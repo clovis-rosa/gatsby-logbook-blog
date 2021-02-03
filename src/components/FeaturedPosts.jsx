@@ -1,14 +1,14 @@
 import React from "react"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
-import { UseLatestPostsQuery } from "../hooks/UseLatestPostsQuery"
+import { UseFeaturedPostsQuery } from "../hooks/UseFeaturedPostsQuery"
 import styled from "styled-components"
 import { SvgArrowNext } from "./SvgFiles"
 
-export default function LatestPosts() {
+export default function FeaturedPosts() {
   const getPostList = () => {
     const postList = []
-    const posts = UseLatestPostsQuery()
+    const posts = UseFeaturedPostsQuery()
     posts.allMarkdownRemark.edges.forEach(postEdge => {
       postList.push({
         id: postEdge.node.id,
@@ -29,7 +29,7 @@ export default function LatestPosts() {
     <>
       <ArticlesSection>
         <ArticlesContainer>
-          <ArticlesHeader>Recent posts:</ArticlesHeader>
+          <ArticlesHeader>Featured:</ArticlesHeader>
 
           <ArticleGrid>
             {postList.map(post => (
@@ -89,7 +89,7 @@ const Article = styled.article`
 
 const ArticleGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 `
 
