@@ -68,7 +68,7 @@ export default function LatestPosts() {
 
 const ArticlesSection = styled.section`
   background: var(--color-white);
-  padding: 0 2rem 3rem;
+  padding: 4rem 2rem 3rem;
 `
 
 const ArticlesContainer = styled.div`
@@ -101,7 +101,8 @@ const ArticlesHeader = styled.div`
 `
 
 const Article = styled.article`
-  padding: 0 0 4rem;
+  /* padding: 0 0 4rem; */
+  padding: 0 0 2rem;
 `
 
 const ArticleGrid = styled.div`

@@ -6,8 +6,8 @@ export default function ButtonAllPosts() {
   return (
     <ButtonSection>
       <ButtonContainer>
-        <ButtonLink>
-          <Button className="learn-more">Read More</Button>
+        <ButtonLink to="/blog">
+          <Button>Read More</Button>
         </ButtonLink>
       </ButtonContainer>
     </ButtonSection>

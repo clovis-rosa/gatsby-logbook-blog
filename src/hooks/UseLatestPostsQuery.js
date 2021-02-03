@@ -6,7 +6,7 @@ export const UseLatestPostsQuery = () => {
       allMarkdownRemark(
         sort: { fields: frontmatter___date, order: DESC }
         skip: 2
-        limit: 3
+        limit: 6
       ) {
         edges {
           node {

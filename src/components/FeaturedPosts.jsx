@@ -66,6 +66,10 @@ export default function FeaturedPosts() {
 const ArticlesSection = styled.section`
   background: var(--color-white);
   padding: 6rem 2rem 3rem;
+
+  @media screen and (max-width: 801px) {
+    padding: 6rem 2rem 3rem;
+  }
 `
 
 const ArticlesContainer = styled.div`
@@ -84,13 +88,41 @@ const ArticlesHeader = styled.h2`
 `
 
 const Article = styled.article`
-  /* padding: 0 0 4rem; */
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: flex-start; */
 `
 
 const ArticleGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
+
+  @media screen and (max-width: 1025px) {
+  }
+
+  @media screen and (max-width: 960px) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  @media screen and (max-width: 834px) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  @media screen and (max-width: 801px) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  @media screen and (max-width: 769px) {
+  }
+
+  @media screen and (max-width: 412px) {
+  }
 `
 
 const H2 = styled.h2`
