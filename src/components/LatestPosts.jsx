@@ -29,7 +29,10 @@ export default function LatestPosts() {
     <>
       <ArticlesSection>
         <ArticlesContainer>
-          <ArticlesHeader>Recent posts:</ArticlesHeader>
+          <ArticlesHeader>
+            <h2>Recent Stories:</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </ArticlesHeader>
 
           <ArticleGrid>
             {postList.map(post => (
@@ -65,7 +68,7 @@ export default function LatestPosts() {
 
 const ArticlesSection = styled.section`
   background: var(--color-white);
-  padding: 4rem 2rem 3rem;
+  padding: 0 2rem 3rem;
 `
 
 const ArticlesContainer = styled.div`
@@ -74,13 +77,27 @@ const ArticlesContainer = styled.div`
   margin: 0 auto;
 `
 
-const ArticlesHeader = styled.h2`
-  font-family: var(--font-family-primary);
-  font-size: 4.75rem;
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: normal;
-  margin-bottom: 2rem;
+const ArticlesHeader = styled.div`
+  padding-bottom: 2rem;
+
+  h2 {
+    font-family: var(--font-family-primary);
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: normal;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: var(--color-black);
+    margin-bottom: 1rem;
+  }
 `
 
 const Article = styled.article`
@@ -95,7 +112,7 @@ const ArticleGrid = styled.div`
 
 const H2 = styled.h2`
   font-family: var(--font-family-primary);
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: normal;
@@ -105,7 +122,7 @@ const H2 = styled.h2`
 
 const P = styled.p`
   font-family: var(--font-family-secondary);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: normal;

@@ -65,7 +65,7 @@ export default function FeaturedPosts() {
 
 const ArticlesSection = styled.section`
   background: var(--color-white);
-  padding: 4rem 2rem 3rem;
+  padding: 6rem 2rem 3rem;
 `
 
 const ArticlesContainer = styled.div`
@@ -84,7 +84,7 @@ const ArticlesHeader = styled.h2`
 `
 
 const Article = styled.article`
-  padding: 0 0 4rem;
+  /* padding: 0 0 4rem; */
 `
 
 const ArticleGrid = styled.div`

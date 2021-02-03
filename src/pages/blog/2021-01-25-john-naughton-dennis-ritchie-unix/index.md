@@ -1,5 +1,5 @@
 ---
-title: "Dennis Ritchie: the other man inside your iPhone"
+title: "The other man inside your iPhone"
 date: "2021-01-25T17:18:00.284Z"
 description: "The groundbreaking work he did with Ken Thompson led to the operating system behind everything from set-top boxes to the iPhone, but who sings the praises of the late Dennis Ritchie?"
 image: "./dennis-unix.jpg"
