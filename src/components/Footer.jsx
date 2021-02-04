@@ -121,10 +121,10 @@ export default function Footer() {
 const FooterSection = styled.footer`
   background: var(--color-black);
   color: var(--color-white);
-  padding: 6rem 2rem 3rem;
+  padding: 3rem 2rem 6rem;
 
   @media screen and (max-width: 801px) {
-    padding: 6rem 2rem 3rem;
+    padding: 3rem 2rem 6rem;
   }
 `
 const FooterContainer = styled.nav`
