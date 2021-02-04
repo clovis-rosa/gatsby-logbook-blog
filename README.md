@@ -96,5 +96,6 @@ Screenshots:
 
 - [Gatsby: Fetching Data at The Component Level with useStaticQuery](https://blog.bitsrc.io/gatsby-fetching-data-at-the-component-level-with-usestaticquery-397e35e648e)
 - Responsive Project with Gatsby Image - https://www.youtube.com/watch?v=ThzUUdIVr_I
-- Gatsby YT Project Github - https://github.com/briancodex/gatsby-website-v1
-- Screenshot Rocks - https://screenshot.rocks/app
+- [Gatsby YT Project Github](https://github.com/briancodex/gatsby-website-v1)
+- [CodePen Button example](https://codepen.io/kathykato/pen/gOOjgmP)
+- [Screenshot Rocks](https://screenshot.rocks/app)

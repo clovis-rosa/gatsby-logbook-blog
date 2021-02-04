@@ -68,10 +68,7 @@ export default function LatestPosts() {
 
 const ArticlesSection = styled.section`
   background: var(--color-white);
-  padding: 4rem 2rem 3rem;
-
-  @media screen and (max-width: 769px) {
-  }
+  padding: 4rem 2rem 2rem;
 
   @media screen and (max-width: 412px) {
     padding: 2rem 2rem 2rem;

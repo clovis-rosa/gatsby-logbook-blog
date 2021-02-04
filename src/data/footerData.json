@@ -1,0 +1,21 @@
+{
+  "title": "Product",
+  "links": [
+    {
+      "linkName": "How It Works",
+      "linkUrl": "how-it-works"
+    },
+    {
+      "linkName": "Enterprise",
+      "linkUrl": "enterprise"
+    },
+    {
+      "linkName": "Pricing",
+      "linkUrl": "pricing"
+    },
+    {
+      "linkName": "Customer-stories",
+      "linkUrl": "customers-stories"
+    }
+  ]
+}

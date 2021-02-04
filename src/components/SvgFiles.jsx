@@ -6,7 +6,7 @@ export const SvgArrowNext = () => {
       <path
         d="M30.76 18l-8.88-8.88a1 1 0 010-1.41l1.41-1.42a1 1 0 011.42 0l13 13a1 1 0 010 1.42l-13 13a1 1 0 01-1.42 0l-1.41-1.42a1 1 0 010-1.41L30.76 22H3.58a1 1 0 01-1-1v-2a1 1 0 011-1h27.18zm1.82 1.83v.34l.18-.17-.18-.17z"
         fill="inherit"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       />
     </svg>
   )

@@ -7,7 +7,7 @@ export default function ButtonAllPosts() {
     <ButtonSection>
       <ButtonContainer>
         <ButtonLink to="/blog">
-          <Button>Read More</Button>
+          <Button>View all articles</Button>
         </ButtonLink>
       </ButtonContainer>
     </ButtonSection>
