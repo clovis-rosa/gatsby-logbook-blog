@@ -8,7 +8,8 @@ export const UseFooterDataQuery = () => {
           node {
             id
             title
-            links {
+            url {
+              id
               linkName
               linkUrl
             }

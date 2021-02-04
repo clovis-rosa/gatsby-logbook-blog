@@ -1,47 +1,26 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { UseFooterDataQuery } from "../hooks/UseFooterDataQuery"
 
 export default function Footer() {
-  const getAllFooterList = () => {
-    const allFooterList = []
-    const allFooter = UseFooterDataQuery()
-    allFooter.allDataJson.edges.forEach(footerEdge => {
-      allFooterList.push({
-        id: footerEdge.node.id,
-        title: footerEdge.node.title,
-        linkTitle: footerEdge.node.links.linkName,
-        linkUrl: footerEdge.node.links.linkUrl,
-      })
-    })
-    return allFooterList
-  }
-
-  const allFooterList = getAllFooterList()
-
   return (
-    <FooterSection>
+    <>
       <FooterContainer>
-        {allFooterList.map(data => {
-          return (
-            <div key={data.id}>
-              <h3>{data.title}</h3>
-              <ul>
-                <li>
-                  <Link to={`/${data.linkUrl}`}>{data.linkTitle}</Link>
-                </li>
-              </ul>
-            </div>
-          )
-        })}
+        <div>
+          <h3>Products</h3>
+          <ul>
+            <li>
+              <Link to="">Something</Link>
+            </li>
+          </ul>
+        </div>
       </FooterContainer>
       <div>
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.com">Gatsby</a>
       </div>
-    </FooterSection>
+    </>
   )
 }
 
