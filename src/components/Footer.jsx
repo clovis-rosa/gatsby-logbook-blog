@@ -5,21 +5,115 @@ import styled from "styled-components"
 export default function Footer() {
   return (
     <>
-      <FooterContainer>
+      <FooterSection>
+        <FooterContainer>
+          <div>
+            <h3>Products</h3>
+            <ul>
+              <li>
+                <Link to="/">Something</Link>
+              </li>
+              <li>
+                <Link to="/">Enterprise</Link>
+              </li>
+              <li>
+                <Link to="/">Pricing</Link>
+              </li>
+              <li>
+                <Link to="/">Customer Stories</Link>
+              </li>
+              <li>
+                <Link to="/">Release Notes</Link>
+              </li>
+              <li>
+                <Link to="/">Status</Link>
+              </li>
+              <li>
+                <Link to="/">Download</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Features</h3>
+            <ul>
+              <li>
+                <Link to="/">Version Control</Link>
+              </li>
+              <li>
+                <Link to="/">Design Collaboration</Link>
+              </li>
+              <li>
+                <Link to="/">Developer Handoff</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Resources</h3>
+            <ul>
+              <li>
+                <Link to="/">Getting Started</Link>
+              </li>
+              <li>
+                <Link to="/">Blog</Link>
+              </li>
+              <li>
+                <Link to="/">Books</Link>
+              </li>
+              <li>
+                <Link to="/">Webinars</Link>
+              </li>
+              <li>
+                <Link to="/">Design Systems</Link>
+              </li>
+              <li>
+                <Link to="/">Remote Work</Link>
+              </li>
+              <li>
+                <Link to="/">Help Center</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Community</h3>
+            <ul>
+              <li>
+                <Link to="/">Twitter</Link>
+              </li>
+              <li>
+                <Link to="/">LinkeIn</Link>
+              </li>
+              <li>
+                <Link to="/">Facebook</Link>
+              </li>
+              <li>
+                <Link to="/">Dribbble</Link>
+              </li>
+              <li>
+                <Link to="/">Instagram</Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Company</h3>
+            <ul>
+              <li>
+                <Link to="/">About</Link>
+              </li>
+              <li>
+                <Link to="/">Careers</Link>
+              </li>
+              <li>
+                <Link to="/">Legal</Link>
+              </li>
+            </ul>
+          </div>
+        </FooterContainer>
         <div>
-          <h3>Products</h3>
-          <ul>
-            <li>
-              <Link to="">Something</Link>
-            </li>
-          </ul>
+          © {new Date().getFullYear()}, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.com">Gatsby</a>
         </div>
-      </FooterContainer>
-      <div>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </div>
+      </FooterSection>
     </>
   )
 }
