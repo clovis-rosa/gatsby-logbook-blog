@@ -4,38 +4,29 @@ import styled from "styled-components"
 import { UseFooterDataQuery } from "../hooks/UseFooterDataQuery"
 
 export default function Footer() {
-  const getAllFooterList = () => {
-    const allFooterList = []
-    const allFooter = UseFooterDataQuery()
-    allFooter.allDataJson.edges.forEach(footerEdge => {
-      allFooterList.push({
-        id: footerEdge.node.id,
-        title: footerEdge.node.title,
-        linkName: footerEdge.node.url.linkName,
-        linkUrl: footerEdge.node.url.linkUrl,
-        linkId: footerEdge.node.url.id,
-      })
-    })
-    return allFooterList
-  }
+  const allFooterList = UseFooterDataQuery().allDataJson.edges
 
-  const allFooterList = getAllFooterList()
-
-  console.log(UseFooterDataQuery())
-  console.log(allFooterList)
+  // console.log(UseFooterDataQuery())
+  // console.log(allFooterList)
 
   return (
     <FooterSection>
       <FooterContainer>
-        {allFooterList.map(data => {
+        {allFooterList.map(({ node }) => {
+          console.log(node, `====================> NODE`)
           return (
-            <div key={data.id}>
-              <h3>{data.title}</h3>
-              <ul>
-                <li>
-                  <Link to={`/${data.linkUrl}`}>{data.linkName}</Link>
-                </li>
-              </ul>
+            <div key={node.id}>
+              <h3>{node.title}</h3>
+              {node.url.map(data => {
+                console.log(data, `====================> DATA`)
+                return (
+                  <ul key={data.id}>
+                    <li>
+                      <Link to={`/${data.linkUrl}`}>{data.linkName}</Link>
+                    </li>
+                  </ul>
+                )
+              })}
             </div>
           )
         })}
