@@ -98,4 +98,5 @@ Screenshots:
 - Responsive Project with Gatsby Image - https://www.youtube.com/watch?v=ThzUUdIVr_I
 - [Gatsby YT Project Github](https://github.com/briancodex/gatsby-website-v1)
 - [CodePen Button example](https://codepen.io/kathykato/pen/gOOjgmP)
+- [Creative Hover Link Effects](https://tympanus.net/Development/CreativeLinkEffects/)
 - [Screenshot Rocks](https://screenshot.rocks/app)
