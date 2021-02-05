@@ -163,10 +163,6 @@ const FooterSection = styled.footer`
   background: var(--color-black);
   color: var(--color-white);
   padding: 3rem 2rem 3rem;
-
-  @media screen and (max-width: 801px) {
-    /* padding: 3rem 2rem 6rem; */
-  }
 `
 const FooterContainer = styled.nav`
   width: 100%;
@@ -176,13 +172,38 @@ const FooterContainer = styled.nav`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* align-items: center; */
   gap: 50px;
+
+  @media screen and (max-width: 960px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 834px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (max-width: 801px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 769px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 665px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 415px) {
+    grid-template-columns: 1fr;
+  }
 `
 const FooterWrap = styled.div`
-  /* padding: 0 1rem 2rem 1rem; */
   font-family: var(--font-family-secondary-mono);
   color: var(--color-white);
+  /* padding: 0 4rem; */
 
   h3 {
     font-family: var(--font-family-secondary-mono);
@@ -239,13 +260,32 @@ const FooterContainerForm = styled.div`
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* justify-content: space-between; */
-  /* align-items: center; */
   gap: 50px;
+
+  @media screen and (max-width: 960px) {
+  }
+
+  @media screen and (max-width: 834px) {
+  }
+
+  @media screen and (max-width: 801px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 769px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 665px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 415px) {
+    grid-template-columns: 1fr;
+  }
 `
 const FooterWrapForm = styled.div`
   color: var(--color-white);
-  /* padding: 0 1rem 2rem 1rem; */
 
   h2 {
     font-family: var(--font-family-primary);
