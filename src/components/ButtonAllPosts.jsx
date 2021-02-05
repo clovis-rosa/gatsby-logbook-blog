@@ -86,4 +86,19 @@ const Button = styled.button`
       transform: translate3d(0, 0, -1em);
     }
   }
+
+  @media screen and (max-width: 834px) {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: 801px) {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  @media screen and (max-width: 415px) {
+    padding: 0.6rem 1rem;
+    font-size: 0.7rem;
+  }
 `
