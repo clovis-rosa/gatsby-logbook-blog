@@ -61,6 +61,99 @@
           "linkUrl": "developer-handoff"
         }
       ]
+    },
+    {
+      "title": "Resources",
+      "id": "003",
+      "url": [
+        {
+          "id": "032",
+          "linkName": "Getting Started",
+          "linkUrl": "getting-started"
+        },
+        {
+          "id": "033",
+          "linkName": "Blog",
+          "linkUrl": "blog"
+        },
+        {
+          "id": "034",
+          "linkName": "Books",
+          "linkUrl": "books"
+        },
+        {
+          "id": "035",
+          "linkName": "Webinars",
+          "linkUrl": "webinars"
+        },
+        {
+          "id": "036",
+          "linkName": "Design Systems",
+          "linkUrl": "design-systems"
+        },
+        {
+          "id": "037",
+          "linkName": "Remote Work",
+          "linkUrl": "remote-work"
+        },
+        {
+          "id": "038",
+          "linkName": "Help Center",
+          "linkUrl": "help-center"
+        }
+      ]
+    },
+    {
+      "title": "Community",
+      "id": "004",
+      "url": [
+        {
+          "id": "042",
+          "linkName": "Twitter",
+          "linkUrl": "twitter"
+        },
+        {
+          "id": "043",
+          "linkName": "LinkedIn",
+          "linkUrl": "linkedin"
+        },
+        {
+          "id": "044",
+          "linkName": "Facebook",
+          "linkUrl": "facebook"
+        },
+        {
+          "id": "045",
+          "linkName": "Dribbble",
+          "linkUrl": "dribbble"
+        },
+        {
+          "id": "046",
+          "linkName": "Instagram",
+          "linkUrl": "instagram"
+        }
+      ]
+    },
+    {
+      "title": "Company",
+      "id": "005",
+      "url": [
+        {
+          "id": "052",
+          "linkName": "About us",
+          "linkUrl": "about-us"
+        },
+        {
+          "id": "053",
+          "linkName": "Careers",
+          "linkUrl": "careers"
+        },
+        {
+          "id": "054",
+          "linkName": "Legal",
+          "linkUrl": "legal"
+        }
+      ]
     }
   ]
 }
