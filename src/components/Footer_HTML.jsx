@@ -1,82 +1,161 @@
 import React from "react"
-import { renderToStaticMarkup } from "react-dom/server"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { UseFooterDataQuery } from "../hooks/UseFooterDataQuery"
+import { renderToStaticMarkup } from "react-dom/server"
 import { SvgArrowNext } from "./SvgFiles"
 
 export default function Footer() {
-  const allFooterList = UseFooterDataQuery().allDataJson.edges
   const svgString = encodeURIComponent(
     renderToStaticMarkup(<SvgArrowNext fill="#fff" />)
   )
 
   return (
-    <FooterSection>
-      <>
-        {allFooterList.map(({ node }) => {
-          return (
-            <FooterContainer key={node.id}>
-              {node.data.map(data => {
-                return (
-                  <FooterWrap key={data.id}>
-                    <h3>{data.title}</h3>
-                    {data.url.map(url => {
-                      return (
-                        <ul key={url.id}>
-                          <li>
-                            <Link to={`/${url.linkUrl}`}>{url.linkName}</Link>
-                          </li>
-                        </ul>
-                      )
-                    })}
-                  </FooterWrap>
-                )
-              })}
-            </FooterContainer>
-          )
-        })}
-      </>
-      <FooterContainerForm>
-        <FooterWrapForm>
-          <h2>Sign Up for our newsletter</h2>
-          <p>
-            Monthly hand-picked discoveries and stories of thriving in a new
-            world of design. GIFs (often) included.
-          </p>
-          <div>
-            <Form>
-              <label htmlFor="">EMAIL ADDRESS</label>
-              <FormInputFlex>
-                <NewsletterInput>
-                  <input
-                    type="email"
-                    placeholder="yourname@example.com"
-                    name="email"
-                    mail="true"
-                  />
-                </NewsletterInput>
-                <NewsletterSubmit>
-                  <input
-                    className="input-inner"
-                    type="submit"
-                    value=""
-                    style={{
-                      backgroundImage: `url('data:image/svg+xml;utf8,${svgString}')`,
-                    }}
-                  ></input>
-                </NewsletterSubmit>
-              </FormInputFlex>
-            </Form>
-          </div>
-        </FooterWrapForm>
-        <FooterWrapLegal>
-          <p>© Copyright {new Date().getFullYear()}</p>
-          <p>All rights reserved.</p>
-          <a href="https://clovisrosa.vercel.app/">Built by Clovis Rosa.</a>
-        </FooterWrapLegal>
-      </FooterContainerForm>
-    </FooterSection>
+    <>
+      <FooterSection>
+        <FooterContainer>
+          <FooterWrap>
+            <h3>Products</h3>
+            <ul>
+              <li>
+                <Link to="/">Something</Link>
+              </li>
+              <li>
+                <Link to="/">Enterprise</Link>
+              </li>
+              <li>
+                <Link to="/">Pricing</Link>
+              </li>
+              <li>
+                <Link to="/">Customer Stories</Link>
+              </li>
+              <li>
+                <Link to="/">Release Notes</Link>
+              </li>
+              <li>
+                <Link to="/">Status</Link>
+              </li>
+              <li>
+                <Link to="/">Download</Link>
+              </li>
+            </ul>
+          </FooterWrap>
+          <FooterWrap>
+            <h3>Features</h3>
+            <ul>
+              <li>
+                <Link to="/">Version Control</Link>
+              </li>
+              <li>
+                <Link to="/">Design Collaboration</Link>
+              </li>
+              <li>
+                <Link to="/">Developer Handoff</Link>
+              </li>
+            </ul>
+          </FooterWrap>
+          <FooterWrap>
+            <h3>Resources</h3>
+            <ul>
+              <li>
+                <Link to="/">Getting Started</Link>
+              </li>
+              <li>
+                <Link to="/">Blog</Link>
+              </li>
+              <li>
+                <Link to="/">Books</Link>
+              </li>
+              <li>
+                <Link to="/">Webinars</Link>
+              </li>
+              <li>
+                <Link to="/">Design Systems</Link>
+              </li>
+              <li>
+                <Link to="/">Remote Work</Link>
+              </li>
+              <li>
+                <Link to="/">Help Center</Link>
+              </li>
+            </ul>
+          </FooterWrap>
+          <FooterWrap>
+            <h3>Community</h3>
+            <ul>
+              <li>
+                <Link to="/">Twitter</Link>
+              </li>
+              <li>
+                <Link to="/">LinkeIn</Link>
+              </li>
+              <li>
+                <Link to="/">Facebook</Link>
+              </li>
+              <li>
+                <Link to="/">Dribbble</Link>
+              </li>
+              <li>
+                <Link to="/">Instagram</Link>
+              </li>
+            </ul>
+          </FooterWrap>
+          <FooterWrap>
+            <h3>Company</h3>
+            <ul>
+              <li>
+                <Link to="/">About</Link>
+              </li>
+              <li>
+                <Link to="/">Careers</Link>
+              </li>
+              <li>
+                <Link to="/">Legal</Link>
+              </li>
+            </ul>
+          </FooterWrap>
+        </FooterContainer>
+        <FooterContainerForm>
+          <FooterWrapForm>
+            <h2>Sign Up for our newsletter</h2>
+            <p>
+              Monthly hand-picked discoveries and stories of thriving in a new
+              world of design. GIFs (often) included.
+            </p>
+            <div>
+              <Form>
+                <label htmlFor="">EMAIL ADDRESS</label>
+                <FormInputFlex>
+                  <NewsletterInput>
+                    <input
+                      type="email"
+                      name="email-universal"
+                      placeholder="yourname@example.com"
+                      name="email"
+                      mail="true"
+                    />
+                  </NewsletterInput>
+                  <NewsletterSubmit>
+                    <input
+                      className="input-inner"
+                      type="submit"
+                      value=""
+                      style={{
+                        backgroundImage: `url('data:image/svg+xml;utf8,${svgString}')`,
+                      }}
+                    ></input>
+                  </NewsletterSubmit>
+                </FormInputFlex>
+              </Form>
+            </div>
+          </FooterWrapForm>
+          <FooterWrapLegal>
+            <p>© Copyright {new Date().getFullYear()}</p>
+            <p>All rights reserved.</p>
+            <a href="https://clovisrosa.vercel.app/">Built by Clovis Rosa.</a>
+          </FooterWrapLegal>
+        </FooterContainerForm>
+      </FooterSection>
+    </>
   )
 }
 
