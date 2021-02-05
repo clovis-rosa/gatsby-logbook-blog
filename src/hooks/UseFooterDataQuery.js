@@ -7,11 +7,12 @@ export const UseFooterDataQuery = () => {
         edges {
           node {
             id
-            title
-            url {
-              id
-              linkName
-              linkUrl
+            data {
+              title
+              url {
+                linkName
+                linkUrl
+              }
             }
           }
         }
