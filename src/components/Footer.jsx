@@ -5,7 +5,9 @@ import { renderToStaticMarkup } from "react-dom/server"
 import { SvgArrowNext } from "./SvgFiles"
 
 export default function Footer() {
-  const svgString = encodeURIComponent(renderToStaticMarkup(<SvgArrowNext />))
+  const svgString = encodeURIComponent(
+    renderToStaticMarkup(<SvgArrowNext fill="#fff" />)
+  )
 
   return (
     <>
@@ -123,7 +125,7 @@ export default function Footer() {
               <Form>
                 <label htmlFor="">EMAIL ADDRESS</label>
                 <FormInputFlex>
-                  <NewsletterWrap>
+                  <NewsletterInput>
                     <input
                       type="email"
                       name="email-universal"
@@ -131,14 +133,14 @@ export default function Footer() {
                       name="email"
                       mail="true"
                     />
-                  </NewsletterWrap>
+                  </NewsletterInput>
                   <NewsletterSubmit>
                     <input
                       className="input-inner"
                       type="submit"
                       value=""
                       style={{
-                        backgroundImage: `url('data:image/svg+xml;utf8, ${svgString}')`,
+                        backgroundImage: `url('data:image/svg+xml;utf8,${svgString}')`,
                       }}
                     ></input>
                   </NewsletterSubmit>
@@ -149,7 +151,7 @@ export default function Footer() {
           <FooterWrapLegal>
             <p>© Copyright {new Date().getFullYear()}</p>
             <p>All rights reserved.</p>
-            <a href="https://www.gatsbyjs.com">Built with Gatsby</a>
+            <a href="https://clovisrosa.vercel.app/">Built by Clovis Rosa.</a>
           </FooterWrapLegal>
         </FooterContainerForm>
       </FooterSection>
@@ -277,7 +279,7 @@ const FooterWrapLegal = styled.div`
   line-height: 1.5;
   letter-spacing: 0.05em;
   color: var(--color-white);
-  padding: 0 1rem 2rem 1rem;
+  /* padding: 0 1rem 2rem 1rem; */
 
   display: flex;
   flex-direction: column;
@@ -308,7 +310,8 @@ const FormInputFlex = styled.div`
   justify-content: flex-start;
   align-items: center;
 `
-const NewsletterWrap = styled.div`
+
+const NewsletterInput = styled.div`
   width: 100%;
 
   input {
