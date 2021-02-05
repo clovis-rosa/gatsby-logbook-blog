@@ -99,4 +99,6 @@ Screenshots:
 - [Gatsby YT Project Github](https://github.com/briancodex/gatsby-website-v1)
 - [CodePen Button example](https://codepen.io/kathykato/pen/gOOjgmP)
 - [Creative Hover Link Effects](https://tympanus.net/Development/CreativeLinkEffects/)
+
+- [Render React SVG component as backgroundImage](https://stackoverflow.com/questions/57789530/render-react-svg-component-as-backgroundimage)
 - [Screenshot Rocks](https://screenshot.rocks/app)
