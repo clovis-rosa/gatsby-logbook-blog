@@ -83,8 +83,7 @@ Here are some places to start:
 ---
 
 Screenshots:
-![Gatsby Starter ome](screenshot_2021-01-04-home.png "home page")
-![Gatsby Starter Blog](screenshot_2021-01-04-blog.png "blog page")
+![Gatsby Blog](screenshot_rocks.png "home page")
 
 ---
 
