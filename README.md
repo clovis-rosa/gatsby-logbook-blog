@@ -83,7 +83,7 @@ Here are some places to start:
 ---
 
 Screenshots:
-![Gatsby Blog](screenshot_rocks.png "home page")
+![Gatsby Blog](screenshot-rocks.png "home page")
 
 ---
 
