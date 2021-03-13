@@ -1,8 +1,8 @@
-# [Gatsby Starter Blog Template] My Gastby Starter Markdown Blog Template
+# Gastby.js Logbook Blog Journal Template
 
 > Hi there! 👋 This is a modified Gastsby Blog Template for my side projects.
 
-Website deployed version at Vercel - [**https://gatsby-starter-blog-template.vercel.app/**](https://gatsby-starter-blog-template.vercel.app/)
+Website deployed version at Vercel - [**https://gatsby-logbook-blog.vercel.app/**](https://gatsby-logbook-blog.vercel.app/)
 
 ![Gatsby Blog](lookbook-devices-star.png "home page")
 
@@ -22,7 +22,7 @@ Website deployed version at Vercel - [**https://gatsby-starter-blog-template.ver
 
     ```shell
     # clone master repo
-    git clone -b https://github.com/clovis-rosa/gatsby-starter-blog-template.git
+    git clone -b https://github.com/clovis-rosa/gatsby-logbook-blog.git
     ```
 
 2.  **Start developing.**
@@ -31,7 +31,7 @@ Website deployed version at Vercel - [**https://gatsby-starter-blog-template.ver
 
     ```shell
     # navigate to the project folder
-    cd gatsby-starter-blog-template/
+    cd gatsby-logbook-blog/
     ```
 
     Install the dependencies
