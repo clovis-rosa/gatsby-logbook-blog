@@ -3,8 +3,10 @@ import styled from "styled-components"
 
 export const Nav = styled.nav`
   top: 0;
+  right: 0;
+  left: 0;
   z-index: 999;
-  position: sticky;
+  position: fixed;
   /* width: 100%; */
   /* max-width: 1160px; */
   /* margin: 0 auto; */

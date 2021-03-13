@@ -1,4 +1,5 @@
 module.exports = {
+  flags: { PRESERVE_WEBPACK_CACHE: true },
   siteMetadata: {
     title: `Gatsby Starter Blog`,
     author: {
@@ -74,7 +75,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-XXXXXXXXX-X",
       },
     },
     `gatsby-plugin-feed`,

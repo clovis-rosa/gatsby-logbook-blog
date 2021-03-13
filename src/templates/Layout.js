@@ -1,17 +1,16 @@
 import React from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import Hero from "../components/Hero"
 import BlogPostLayout from "../templates/BlogPostLayout"
+// import Layout from "../templates/Layout"
 
 export default function Layout({ children }) {
   return (
     <>
       <header>
         <Navbar />
-        {!BlogPostLayout ? <Hero /> : null}
       </header>
-
+      {/* <BlogPostLayout /> */}
       {children}
       <Footer />
     </>

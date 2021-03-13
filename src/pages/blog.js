@@ -73,7 +73,8 @@ export default BlogIndex
 
 const ArticlesSection = styled.section`
   background: var(--color-white);
-  padding: 4rem 2rem 2rem;
+  /* padding: 4rem 2rem 2rem; */
+  padding: 8rem 2rem 2rem; /*! Bigger top padding due fixed navbar */
 
   @media screen and (max-width: 412px) {
     padding: 2rem 2rem 2rem;

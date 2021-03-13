@@ -4,6 +4,8 @@
 
 Website deployed version at Vercel - [**https://gatsby-starter-blog-template.vercel.app/**](https://gatsby-starter-blog-template.vercel.app/)
 
+![Gatsby Blog](lookbook-devices-star.png "home page")
+
 ---
 
 ### Here some details of what you will find inside:
@@ -79,11 +81,6 @@ Here are some places to start:
 ## 💫 Deploying
 
 - I recommend to use either [Vercel](https://vercel.com/) or [Netlify](https://netlify.com) for hosting your site.
-
----
-
-Screenshots:
-![Gatsby Blog](screenshot-rocks.png "home page")
 
 ---
 

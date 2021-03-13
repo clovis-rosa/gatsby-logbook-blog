@@ -22,7 +22,7 @@ export default function Hero() {
 
 const HeroContainer = styled.div`
   background: var(--color-black);
-  padding: 1rem 2rem 2rem;
+  padding: 6rem 2rem 2rem; /*! Bigger top padding due fixed navbar */
 `
 
 const HeroStyles = styled.div`
